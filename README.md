@@ -38,10 +38,19 @@ my-rules\
 | `rules/testing-pitfalls.md` | **死文件复活** | `~\.agents\rules\testing-pitfalls.md` |
 | `rules/powershell-file-encoding.md` | **新写**（非收编） | 2026-09-28 由复盘体系落地（BOM 教训第二次踩中） |
 | `rules/landing-sweep.md` | **新写**（非收编） | 2026-09-28 评审第 4 轮落地（"落地后回头扫"的检查点） |
+| `rules/own-judgment.md` | **新写**（非收编） | 2026-10-01 用户当场指令（遇到难题也要自己拿判断，别当甩手掌柜） |
+| `rules/global-ask-before-acting.md` | **新写**（非收编） | 2026-10-02 用户当场指令（有想法先沟通、拿到授权再动手） |
+| `rules/rules-single-source.md` | **新写**（非收编） | 2026-10-02 落地分析产出（新建规则只建源、经 `aas` 同步；KB `L-020`） |
+| `rules/skill-assets-convention.md` | **新写**（非收编） | 2026-10-02 用户当场指令（技能产物骨架放 `assets/`，不内联 SKILL.md；KB `L-021`） |
+| `rules/docs-convention.md` | **新写**（非收编） | 2026-10-07 用户当场指令（项目文档按生命周期状态分目录，未完成的放 `docs/after/`） |
+| `rules/no-unverified-claims.md` | **新写**（非收编） | 2026-10-07 用户当场指令（判断必须带判据；「查不到」≠「需要你定」） |
+| `rules/how-i-must-reason.md` | **新写**（非收编） | 2026-10-08 用户当场指令（推理纪律合并：`no-unverified-claims` + `own-judgment` §选择权 + `numbers-must-be-measured` + 成本话术/性质判断/反驳/收尾审计） |
+
+> **⚠️ 上表里 `numbers-must-be-measured`、`no-unverified-claims`、`own-judgment` 三行是历史记录**（它们曾被收编 / 新写过），但三个源文件已于 2026-10-08 **合并进 `how-i-must-reason.md` 并删除**（`own-judgment` 全文并入，其中「选择权」那节进 §5、「规则是手段」那节进同名小节）。留行是为了不篡改收编账目；**要找它们的内容，去新规则**。
 
 **「死文件复活」是什么意思**：这两条规则一直躺在磁盘上，但 Trae **从不读取** `~\.agents\rules\` 这个目录，所以它们**从未生效过**。收编并经同步进入 `user_rules\` 后，才第一次真正生效。
 
-规则正文**逐字保留原文**（收编的 7 条未作任何改写；后加的 2 条为新建）。
+规则正文**逐字保留原文**。**共 13 条**（2026-10-08 合并前是 15 条：`no-unverified-claims` + `own-judgment` + `numbers-must-be-measured` 三条并成 `how-i-must-reason`，**3 条 → 1 条，减 2**）——取数命令：`Get-ChildItem D:\Seed\my-rules\rules -Filter *.md | Measure-Object`（2026-10-08 实测 **13**），**新增/合并规则后须同步此数**。
 
 ## 现状与待办
 
